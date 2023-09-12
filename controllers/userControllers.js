@@ -8,7 +8,7 @@ function userAboutController(req, res) {
     res.send("<h1> This is Users /about </h1>");
 }
 
-function userContactController(req, res)=> {
+function userContactController(req, res) {
     res.send("<h1> This is Users /contact </h1>");
 }
 
