@@ -2,13 +2,13 @@ import express from "express";
 
 const router = express.Router();
 
-import { userHomeController, userAboutController, userContactController } from "../controllers/userControllers.js";
+router.get("/home", (req,res)=>{
+    res.send("<h1> This Users is /home");
+});
 
-router.get("/", userHomeController);
-
-router.get("/about", userAboutController);
-
-router.get("/contact", userContactController);
+router.get("/about", (req,res)=>{
+    res.send("<h1> This Users is /about");
+});
 
 
 export default router;
