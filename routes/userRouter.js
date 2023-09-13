@@ -1,17 +1,13 @@
 import express from "express";
+import { userAboutController, userContactController, userHomeController } from "../controllers/userControllers";
 
 const router = express.Router();
 
-router.get("/home",(req, res)=>{
-    res.send("<h1> This User is /home</h1>");
-});
 
-router.get("/admin",(req, res)=>{
-    res.send("<h1> This User is /admin</h1>");
-});
+router.get("/",userHomeController);
 
-router.get("/contact",(req, res)=>{
-    res.send("<h1> This User is /contact</h1>");
-});
+router.get("/about",userAboutController);
+
+router.get("/contact",userContactController);
 
 export default router;
